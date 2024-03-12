@@ -20,7 +20,7 @@ char* dirname(const char* path) {
             return NULL;
         }
     #elif __linux__
-        if (realpath(nomeArquivo, caminhoCompleto) == NULL) {
+        if (realpath(path, fullPath) == NULL) {
             perror("Error getting full path");
             return NULL;
         }
